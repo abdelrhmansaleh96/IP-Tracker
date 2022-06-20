@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+.leaflet {
+  width: 100vw;
+
+  height: 65vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  background-image: url(./images/pattern-bg.png);
+  height: 35vh;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-rows: 0.5fr 1fr;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: relative;
+}
+
+.info {
+  display: flex;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  position: absolute;
+  z-index: 999;
+  top: 11vh;
+}
+.sm {
+  padding: 10px 25px;
+  position: relative;
+}
+.sm::after {
+  position: absolute;
+  content: "";
+  background-color: black;
+  width: 1px;
+  height: 50%;
+  bottom: 20%;
+  right: 0;
+}
+h4 {
+  color: #7b797ea5;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.input {
+  padding-right: 7rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-top-left-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+}
+button {
+  background-color: black;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-top-right-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+button:hover {
+  cursor: pointer;
+}
+button:active {
+  box-shadow: 0 0 0 4px #0b0510;
+}
+#btn1 {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+h2 {
+  color: white;
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 570px) {
+  .container {
+    height: 40vh;
   }
-  to {
-    transform: rotate(360deg);
+  .leaflet {
+    height: 60vh;
+  }
+  .info {
+    display: flex;
+
+    background-color: white;
+    /* padding: 10px 20px; */
+    border-radius: 20px;
+    position: absolute;
+    z-index: 999;
+    top: 11vh;
+    flex-direction: column;
+  }
+  .sm {
+    padding: 0;
+  }
+  .sm::after {
+    display: none;
+  }
+  h3 {
+    font-size: 15px;
+    margin: 2px 25px;
+  }
+  h4 {
+    font-size: 7px;
+    margin: 2px 20px;
   }
 }
