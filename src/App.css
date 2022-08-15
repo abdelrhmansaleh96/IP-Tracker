@@ -26,7 +26,7 @@
   border-radius: 20px;
   position: absolute;
   z-index: 999;
-  top: 11vh;
+  top: 150px;
 }
 .sm {
   padding: 10px 25px;
@@ -91,7 +91,7 @@ h2 {
     border-radius: 20px;
     position: absolute;
     z-index: 999;
-    top: 11vh;
+    top: 150px;
     flex-direction: column;
   }
   .sm {
